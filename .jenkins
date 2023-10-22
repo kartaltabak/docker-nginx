@@ -8,7 +8,7 @@ dockerBuildPipeline(
                 registryRepoName : 'kartaltabak/nginx',
                 imageTestCommands: [
                         'nginx -h',
-                        'ping -h'
+                        'ping -V'
                 ]
         ]
 )

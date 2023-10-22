@@ -1,3 +1,4 @@
+//noinspection GroovyUnusedAssignment
 @Library('github-jenkins-pipeline') _
 
 dockerBuildPipeline(

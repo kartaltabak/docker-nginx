@@ -6,7 +6,8 @@ dockerBuildPipeline(
                 baseImage        : 'nginx:latest',
                 registryRepoName : 'kartaltabak/nginx',
                 imageTestCommands: [
-                        'sqlserver2pgsql --help'
+                        'nginx -h',
+                        'ping -h'
                 ]
         ]
 )

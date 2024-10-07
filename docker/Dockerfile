@@ -11,6 +11,6 @@ ARG KTVERSION_FILE="/sbin/ktversion"
 
 RUN echo "#!/usr/bin/env bash" > $KTVERSION_FILE && \
     echo -n "echo " >> $KTVERSION_FILE && \
-    echo "$(nginx -v 2>&1 | awk 'BEGIN{ FS="[ /]"; }{ printf("nginx-%s\n", $4);}')" >> $KTVERSION_FILE && \
+    echo "$(nginx -v 2>&1 | awk 'BEGIN{ FS="[ /]"; }{ printf("%s\n", $4);}')" >> $KTVERSION_FILE && \
     chmod +x $KTVERSION_FILE
 
